@@ -12,3 +12,7 @@
 交易控制（Transaction）<br>
 分頁查詢<br>
 JasperReport PDF 報表<br>
+<hr>
+預設帳號：<br>
+管理員：admin / admin123<br>
+會員：demo / demo123<br>
