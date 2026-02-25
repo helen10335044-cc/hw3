@@ -16,3 +16,5 @@ JasperReport PDF 報表<br>
 預設帳號：<br>
 管理員：admin / admin123<br>
 會員：demo / demo123<br>
+<hr>
+待修正：檔案匯出後無法讀取照片，就算把images放在同個地方也無法讀檔。但開專案看的時候是ok。
