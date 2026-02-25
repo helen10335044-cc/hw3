@@ -1,6 +1,6 @@
 # Booking System 2 – Java 訂房系統
 
-一個使用 Java 8 + Maven + MVC + DAO Pattern + MySQL 8 開發的桌面訂房管理系統。<br>
+使用 Java 8 + Maven + MVC + DAO Pattern + MySQL 開發的訂房管理系統。<br>
 
 本專案模擬真實訂房網站，包含：<br>
 會員前台訂房<br>
