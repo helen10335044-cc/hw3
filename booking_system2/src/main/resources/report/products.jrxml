@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="products" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+    <parameter name="title" class="java.lang.String"/>
+    <field name="id" class="java.lang.Integer"/>
+    <field name="productCode" class="java.lang.String"/>
+    <field name="productName" class="java.lang.String"/>
+    <field name="pricePerNight" class="java.math.BigDecimal"/>
+    <field name="stock" class="java.lang.Integer"/>
+
+    <title>
+        <band height="40">
+            <textField>
+                <reportElement x="0" y="0" width="555" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="18">
+            <staticText><reportElement x="0" y="0" width="40" height="18"/><text><![CDATA[ID]]></text></staticText>
+            <staticText><reportElement x="40" y="0" width="120" height="18"/><text><![CDATA[CODE]]></text></staticText>
+            <staticText><reportElement x="160" y="0" width="210" height="18"/><text><![CDATA[NAME]]></text></staticText>
+            <staticText><reportElement x="370" y="0" width="110" height="18"/><text><![CDATA[PRICE/NIGHT]]></text></staticText>
+            <staticText><reportElement x="480" y="0" width="75" height="18"/><text><![CDATA[STOCK]]></text></staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="18">
+            <textField><reportElement x="0" y="0" width="40" height="18"/><textFieldExpression><![CDATA[$F{id}]]></textFieldExpression></textField>
+            <textField><reportElement x="40" y="0" width="120" height="18"/><textFieldExpression><![CDATA[$F{productCode}]]></textFieldExpression></textField>
+            <textField><reportElement x="160" y="0" width="210" height="18"/><textFieldExpression><![CDATA[$F{productName}]]></textFieldExpression></textField>
+            <textField><reportElement x="370" y="0" width="110" height="18"/><textFieldExpression><![CDATA[$F{pricePerNight}]]></textFieldExpression></textField>
+            <textField><reportElement x="480" y="0" width="75" height="18"/><textFieldExpression><![CDATA[$F{stock}]]></textFieldExpression></textField>
+        </band>
+    </detail>
+</jasperReport>

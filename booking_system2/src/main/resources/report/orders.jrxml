@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="orders" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+    <parameter name="title" class="java.lang.String"/>
+    <field name="id" class="java.lang.Integer"/>
+    <field name="orderNo" class="java.lang.String"/>
+    <field name="customerId" class="java.lang.Integer"/>
+    <field name="checkInDate" class="java.time.LocalDate"/>
+    <field name="checkOutDate" class="java.time.LocalDate"/>
+    <field name="totalAmount" class="java.math.BigDecimal"/>
+    <field name="status" class="java.lang.String"/>
+
+    <title>
+        <band height="40">
+            <textField>
+                <reportElement x="0" y="0" width="555" height="30"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="18">
+            <staticText><reportElement x="0" y="0" width="30" height="18"/><text><![CDATA[ID]]></text></staticText>
+            <staticText><reportElement x="30" y="0" width="130" height="18"/><text><![CDATA[ORDER_NO]]></text></staticText>
+            <staticText><reportElement x="160" y="0" width="50" height="18"/><text><![CDATA[CUST]]></text></staticText>
+            <staticText><reportElement x="210" y="0" width="85" height="18"/><text><![CDATA[CHECKIN]]></text></staticText>
+            <staticText><reportElement x="295" y="0" width="85" height="18"/><text><![CDATA[CHECKOUT]]></text></staticText>
+            <staticText><reportElement x="380" y="0" width="95" height="18"/><text><![CDATA[TOTAL]]></text></staticText>
+            <staticText><reportElement x="475" y="0" width="80" height="18"/><text><![CDATA[STATUS]]></text></staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="18">
+            <textField><reportElement x="0" y="0" width="30" height="18"/><textFieldExpression><![CDATA[$F{id}]]></textFieldExpression></textField>
+            <textField><reportElement x="30" y="0" width="130" height="18"/><textFieldExpression><![CDATA[$F{orderNo}]]></textFieldExpression></textField>
+            <textField><reportElement x="160" y="0" width="50" height="18"/><textFieldExpression><![CDATA[$F{customerId}]]></textFieldExpression></textField>
+            <textField><reportElement x="210" y="0" width="85" height="18"/><textFieldExpression><![CDATA[$F{checkInDate}.toString()]]></textFieldExpression></textField>
+            <textField><reportElement x="295" y="0" width="85" height="18"/><textFieldExpression><![CDATA[$F{checkOutDate}.toString()]]></textFieldExpression></textField>
+            <textField><reportElement x="380" y="0" width="95" height="18"/><textFieldExpression><![CDATA[$F{totalAmount}]]></textFieldExpression></textField>
+            <textField><reportElement x="475" y="0" width="80" height="18"/><textFieldExpression><![CDATA[$F{status}]]></textFieldExpression></textField>
+        </band>
+    </detail>
+</jasperReport>
