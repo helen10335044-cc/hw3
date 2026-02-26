@@ -50,6 +50,10 @@ ESC 關閉
 列印訂單報表（PDF）
 分頁查詢
 
+
+https://github.com/user-attachments/assets/abb235ce-5609-48fc-944b-ba4269b03072
+
+
 https://github.com/user-attachments/assets/e9fe65e2-6bf1-41bd-a929-987a0fc99b56
 
 
